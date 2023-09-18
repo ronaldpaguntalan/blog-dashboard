@@ -1,1 +1,62 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+:root{
+   --primary-color: #333333;
+   --secondary-color: #0077B6;
+   --text1-color: #F5F5F5;
+   --text2-color: #FFFFFF;
+   --paragraph-color: #596392;
+   --warning-color: #C99C06;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    color: var(--text1-color);
+    background-color: var(--primary-color);
+}
+
+.site-logo{
+    background-color: var(--secondary-color);
+    color: var(--text2-color);
+    border-radius: 40px;
+    padding: 5px 20px;
+}
+
+.paragraph-color{
+    color: var(--paragraph-color)
+}
+
+.paragraph-color2{
+    color: var(--text2-color)
+}
+
+.shadow-effect{
+    border: none;
+    box-shadow: 0px 0px 33px -10px rgba(12, 11, 11, 0.3);
+}
+
+.bg-theme{
+    background-color: var(--secondary-color);
+}
+
+.card-bg-dark-theme{
+    background-color: #1E1D1D;
+}
+
+input[type = text], input[type = email]{
+    height: 49px;
+    padding-left: 20px;
+    font-size: 13px;
+    border: none;
+    border-radius: unset;
+}
+
+.btn-secondary-color{
+    background-color: var(--secondary-color);
+    border: none;
+    border-radius: unset;
+    color: white;
+}

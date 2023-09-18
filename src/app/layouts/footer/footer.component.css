@@ -1,0 +1,26 @@
+footer{
+    background-color: var(--text2-color);
+    height: 130px;
+}
+
+.site-logo{
+    font-size: 1.2em;
+}
+
+.footer-links li{
+    display: inline;
+    margin-right: 20px;
+}
+
+.footer-links li:last-child {
+    margin-right: 0; /* Remove margin for the last li element */
+}
+
+.footer-links li a{
+    color: var(--primary-color)
+}
+
+p{
+    color: var(--primary-color)
+}
+
