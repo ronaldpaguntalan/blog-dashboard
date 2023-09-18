@@ -1,0 +1,46 @@
+ Saving Data
+ 
+ 
+ // let subCategoryData = {
+    //   subCategory: 'subCategory1',
+    // };
+
+    // Adding data to FireStore Collection with callback
+
+    // this.firestore
+    //   .collection('categories')
+    //   .add(categoryData)
+    //   .then((docRef) => {
+    //     console.log(docRef);
+
+        // <==== Path Method =====>
+        // this.firestore
+        //   .doc(`categories/$[docRef.id]`)
+        //   .collection('subcategories')
+        //   .add(subCategoryData)
+        //   .then((docRef1) => {
+        //     console.log(docRef1);
+        //   });
+
+      //   this.firestore
+      //     .collection('categories')
+      //     .doc(docRef.id)
+      //     .collection('subcategories')
+      //     .add(subCategoryData)
+      //     .then((docRef1) => {
+      //       console.log(docRef1);
+
+      //       // this.firestore
+      //       //   .doc(`categories/$[docRef.id]/subcategories/$[docRef1.id]`)
+      //       //   .collection('subsubcategories')
+      //       //   .add(subCategoryData)
+      //       //   .then((docRef2) => {
+      //       //     console.log(
+      //       //       'Subsub Category has Successfully Saved to fireStore!'
+      //       //     );
+      //       //   });
+      //     });
+      // })
+      // .catch((err) => {
+      //   console.log(err);
+      // });

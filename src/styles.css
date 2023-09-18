@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~bootstrap/dist/css/bootstrap.min.css';
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import "~ngx-toastr/toastr";
 
 :root{
    --primary-color: #333333;
@@ -52,6 +53,7 @@ input[type = text], input[type = email]{
     font-size: 13px;
     border: none;
     border-radius: unset;
+    width: 100%;
 }
 
 .btn-secondary-color{
@@ -59,4 +61,9 @@ input[type = text], input[type = email]{
     border: none;
     border-radius: unset;
     color: white;
+    font-size: 13px;
+}
+
+.text-secondary-color{
+    color: var(--secondary-color);
 }
