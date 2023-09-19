@@ -1,0 +1,100 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <h3 class="text-primary">Add New Post</h3>
+      <p class="mb-5">You can add your new post here</p>
+    </div>
+  </div>
+
+  <form>
+    <div class="row">
+      <div class="col-md-7">
+        <div class="card shadow-effect">
+          <div class="card-body">
+            <div class="form-group">
+              <label for="" class="text-dark">Title</label>
+              <input
+                type="text"
+                class="form-control border border-gray rounded"
+                (keyup)="onTitleChanged($event)"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="" class="text-dark">Permalink</label>
+              <input
+                type="text"
+                class="form-control border border-gray rounded"
+                name="permalink"
+                [(ngModel)]="permalink"
+                disabled
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="" class="text-dark">Excerpt</label>
+              <textarea cols="30" rows="10" class="form-control"></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-5">
+        <div class="card shadow-effect">
+          <div class="card-body">
+            <div class="form-group">
+              <label for="" class="text-dark">
+                Please select a post category
+              </label>
+              <select class="custom-select mb-4">
+                <option value="" disabled>Please select a category</option>
+                <option *ngFor = "let category of categories">{{category.data.category}}</option>
+              </select>
+
+              <div class="form-group">
+                <div class="custom-file">
+                  <label for="" class="custom-file-label text-dark">
+                    Post Image
+                  </label>
+                  <input
+                    type="file"
+                    class="custom-file-input text-dark"
+                    accept="image/*"
+                    (change)="showPreview($event)"
+                  />
+                </div>
+                <img
+                    [src]="imgSrc"
+                    class="form-control img-fluid img-preview mt-2"
+                  />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-3 mb-5">
+      <div class="col-md-12">
+        <div class="card shadow-effect">
+          <div class="card-body">
+            <div class="form-group">
+              <label for="" class="text-dark"> Content </label>
+              <angular-editor placeholder="Add your Content here..." class="text-dark"></angular-editor>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-12 text-center mb-5">
+      <button class="btn btn-info">Save Post</button>
+      <button
+        class="btn btn-warning ml-3"
+        routerLink="/posts                                                                                         "
+      >
+        Back to Post
+      </button>
+    </div>
+  </form>
+</div>

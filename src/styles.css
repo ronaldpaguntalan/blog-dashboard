@@ -14,7 +14,7 @@
 
 body{
     font-family: 'Open Sans', sans-serif;
-    font-size: 12px;
+    font-size: 14px;
     color: var(--text1-color);
     background-color: var(--primary-color);
 }
@@ -50,7 +50,6 @@ body{
 input[type = text], input[type = email]{
     height: 49px;
     padding-left: 20px;
-    font-size: 13px;
     border: none;
     border-radius: unset;
     width: 100%;
