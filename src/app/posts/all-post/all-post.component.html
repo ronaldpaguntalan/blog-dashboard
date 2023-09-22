@@ -1,6 +1,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
+            <!-- Header Card -->
             <div class="card shadow-effect card-bg-dark-theme">
                 <div class="card-body text-center">
                     <h3> All Blog Posts </h3>
@@ -11,6 +12,49 @@
                     <button class="btn btn-warning ml-2 rounded-0" routerLink="/">
                         Back to Dashboard
                     </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <!-- Blog Posts Table -->
+            <div class="card shadow-effect mt-5 mb-5">
+                <div class="card-body">
+                    <table class="table row-border table-hover table-responsive">
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>Post Image</th>
+                                <th>Title</th>
+                                <!-- <th>Excerpt</th> -->
+                                <th>Category</th>
+                                <th>Date Timestamp</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Loop through the blog post data -->
+                            <tr *ngFor="let post of postArray; let i = index">
+                                <td class="font-weight-bold" style="width: 5%">{{postArray.length - i}}</td>
+                                <td style="width: 30%"><img src="{{post.postImgPath}}" class="img img-fluid"></td>
+                                <td style="width: 15%">{{post.title}}</td>
+                                <!-- <td class="text-break" style="width: 30%">{{post.excerpt}}</td> -->
+                                <td style="width: 5%">{{post.category.category}}</td>
+                                <td style="width: 15%">{{post.createdAt.toDate() | date: 'medium'}}</td>
+                                <td style="width: 30%">
+                                    <!-- Edit button with a link to the edit page for the post -->
+                                    <button class="btn btn-sm btn-warning" routerLink="/posts/new" [queryParams]="{id: post.id}">Edit</button>
+                                    <!-- Delete button with a click event handler to trigger the onDelete function -->
+                                    <button class="btn btn-sm btn-danger ml-2" (click)="onDelete(post.postImgPath, post.id)">Delete</button>
+
+                                    <button class="btn btn-sm btn-success ml-2" *ngIf ='!post.isFeatured' (click)="onFeatured(post.id, true)">Mark Featured</button>
+                                    <button class="btn btn-sm btn-info ml-2" *ngIf ='post.isFeatured' (click)="onFeatured(post.id, false)">Remove Featured</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>

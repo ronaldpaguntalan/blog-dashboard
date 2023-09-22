@@ -12,6 +12,7 @@ export class CategoriesService {
     private toastr: ToastrService
   ) {}
 
+  // Save category data to Firestore
   saveData(data: any) {
     this.firestore
       .collection('categories')
@@ -25,6 +26,7 @@ export class CategoriesService {
       });
   }
 
+  // Load all categories from Firestore
   loadData() {
     return this.firestore
       .collection('categories')
@@ -40,6 +42,7 @@ export class CategoriesService {
       );
   }
 
+  // Update category data in Firestore by ID
   updateData(id: any, editedData: any) {
     this.firestore
       .doc(`categories/${id}`)
@@ -49,7 +52,8 @@ export class CategoriesService {
       });
   }
 
-  deleteData(id : string){
+  // Delete category data in Firestore by ID
+  deleteData(id: string) {
     this.firestore
         .doc(`categories/${id}`)
         .delete()

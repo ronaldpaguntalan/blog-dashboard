@@ -4,12 +4,14 @@ import { FormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http'
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AngularEditorModule } from '@kolkov/angular-editor';
 
 import { AngularFireModule } from '@angular/fire/compat';
 import { environment } from '../environments/environment.prod';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { AngularFireStorageModule } from '@angular/fire/compat/storage'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -39,7 +41,9 @@ import { NewPostComponent } from './posts/new-post/new-post.component';
     ToastrModule.forRoot(),
     BrowserAnimationsModule,
     AngularEditorModule,
-    HttpClientModule
+    HttpClientModule, 
+    ReactiveFormsModule,
+    AngularFireStorageModule
   ],
   providers: [],
   bootstrap: [AppComponent],
