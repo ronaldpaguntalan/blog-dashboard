@@ -112,9 +112,15 @@ export class PostsService {
       });
   }
 
-  markFeatured(id: any, featuredData: any){
-    this.firestore.doc(`posts/${id}`).update(featuredData).then(() => {
-      this.toastr.info('Featured status updated..!')
-    })
+  // Update the featured status of a post
+  markFeatured(id: any, featuredData: any) {
+    // Reference the Firestore document for the post using its ID and update it with the provided featuredData
+    this.firestore
+      .doc(`posts/${id}`)
+      .update(featuredData)
+      .then(() => {
+        // Display an info toast message to indicate that the featured status has been updated
+        this.toastr.info('Featured status updated..!');
+      });
   }
 }

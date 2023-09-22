@@ -49,8 +49,11 @@
                                     <!-- Delete button with a click event handler to trigger the onDelete function -->
                                     <button class="btn btn-sm btn-danger ml-2" (click)="onDelete(post.postImgPath, post.id)">Delete</button>
 
-                                    <button class="btn btn-sm btn-success ml-2" *ngIf ='!post.isFeatured' (click)="onFeatured(post.id, true)">Mark Featured</button>
-                                    <button class="btn btn-sm btn-info ml-2" *ngIf ='post.isFeatured' (click)="onFeatured(post.id, false)">Remove Featured</button>
+                                    <!-- Button to mark a post as featured -->
+                                    <button class="btn btn-sm btn-success ml-2" *ngIf="!post.isFeatured" (click)="onFeatured(post.id, true)">Mark Featured</button>
+
+                                    <!-- Button to remove a post's featured status -->
+                                    <button class="btn btn-sm btn-info ml-2" *ngIf="post.isFeatured" (click)="onFeatured(post.id, false)">Remove Featured</button>
                                 </td>
                             </tr>
                         </tbody>

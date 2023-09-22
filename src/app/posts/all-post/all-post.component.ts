@@ -27,10 +27,14 @@ export class AllPostComponent {
     this.postsService.deleteImage(postImgPath, id);
   }
 
-  onFeatured(id : any, value : boolean){
-    const featuredData = {
-      isFeatured: value
-    }
-    this.postsService.markFeatured(id, featuredData);
-  }
+ // Mark a post as featured or unfeatured
+onFeatured(id: any, value: boolean) {
+  // Create an object with the updated featured status
+  const featuredData = {
+    isFeatured: value
+  };
+
+  // Call the 'markFeatured' method from the 'postsService' to update the post's featured status
+  this.postsService.markFeatured(id, featuredData);
+}
 }
