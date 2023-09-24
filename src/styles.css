@@ -47,7 +47,7 @@ body{
     background-color: #1E1D1D;
 }
 
-input[type = text], input[type = email]{
+input[type = text], input[type = email], input[type = password]{
     height: 49px;
     padding-left: 20px;
     border: none;
@@ -60,7 +60,7 @@ input[type = text], input[type = email]{
     border: none;
     border-radius: unset;
     color: white;
-    font-size: 13px;
+    height: 49px;
 }
 
 .text-secondary-color{

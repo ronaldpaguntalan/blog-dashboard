@@ -1,0 +1,9 @@
+.btn-info{
+    background-color: var(--secondary-color);
+    border-radius: unset;
+    border: none;
+}
+
+.btn-info:hover{
+    background-color: #049ff3;
+}
